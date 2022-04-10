@@ -17,7 +17,7 @@ madeWith: {
 
 | Info        | Data  |
 | ------------- | -----:|
-| Email         | [pauljohnpirie:yahoo.co.uk](mailto:pauljohnpirie@yahoo.co.uk) |
+| Email         | [pauljohnpirie@yahoo.co.uk](mailto:pauljohnpirie@yahoo.co.uk) |
 | Website      |   [paulpirie.com](https://paulpirie.com) |
 | Phone |    (+44) 757 593 9905 |
 | Address |    Greater Glasgow, Scotland |
