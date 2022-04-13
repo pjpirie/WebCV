@@ -2,7 +2,7 @@ name: WebCV - CI/CD
 
 on:
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   web-deploy:
