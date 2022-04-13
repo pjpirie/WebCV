@@ -17,7 +17,7 @@ const Home: NextPage = () => {
     <div className="flex flex-col justify-end w-full h-auto pt-10 md:bg-gray-900">
       <div className="flex flex-row md:container md:mx-auto">
         <Head>
-          <title>Paul Pirie CV</title>
+          <title>Paul Pirie WebCV</title>
           <meta name="description" content="CV for Paul Pirie" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
