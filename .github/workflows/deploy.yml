@@ -6,7 +6,7 @@ on:
 
 jobs:
   test-build:
-    name: Test and Build
+    name: Test and Build 🧱📐
     runs-on: ubuntu-latest
     steps:
       - name: Testing 👨‍🔬
