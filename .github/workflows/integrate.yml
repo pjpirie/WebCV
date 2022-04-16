@@ -9,6 +9,7 @@ jobs:
     name: Test 👨‍🔬
     runs-on: ubuntu-latest
     steps:
+      - run: npm ci
       - run: npm run lint
 
   build:
@@ -16,6 +17,7 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     steps:
+      - run: npm ci
       - run: npm run build
 
   web-deploy:
