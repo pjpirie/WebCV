@@ -86,7 +86,7 @@ const Home = () => {
 								<BioElement
 									icon={TwitterIcon}
 									iconAlt="Twitter Icon"
-									keyName="Linkedin"
+									keyName="Twitter"
 									value="@pjpirie"
 									url="https://twitter.com/pjpirie"
 								/>
