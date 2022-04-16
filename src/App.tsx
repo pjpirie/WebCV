@@ -1,3 +1,4 @@
+import "./global.css";
 import EmailIcon from "../assets/icons/Icon-3.svg";
 import LinkIcon from "../assets/icons/Icon-2.svg";
 import PhoneIcon from "../assets/icons/Icon-1.svg";
@@ -8,7 +9,6 @@ import GithubIcon from "../assets/icons/Git.png";
 import LinkedinIcon from "../assets/icons/Link.png";
 import EnglishIcon from "../assets/icons/UK.png";
 import XPCLogoIcon from "../assets/icons/XPC.png";
-import "./global.css";
 import ExperienceCard from "./comp/ExperienceCard.comp";
 import BioElement from "./comp/BioElement.comp";
 
