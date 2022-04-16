@@ -11,12 +11,15 @@ import EnglishIcon from "../assets/icons/UK.png";
 import XPCLogoIcon from "../assets/icons/XPC.png";
 import ExperienceCard from "./comp/ExperienceCard.comp";
 import BioElement from "./comp/BioElement.comp";
+import RSDPThumbnail from "../assets/thumbnails/RSDP_X2.png";
+import GithubThumbnail from "../assets/thumbnails/github_X2.png";
+import ProjectCard from "./comp/ProjectCard.comp";
 
 const Home = () => {
 	return (
 		<div className="flex flex-col justify-end w-full h-auto pt-10 bg-gray-900 ">
 			<div className="flex flex-col h-full sm:flex-row md:container md:mx-auto">
-				<aside className="w-full p-10 bg-gray-800 divide-y divide-gray-600 rounded-tl-lg sm:w-fit">
+				<aside className="w-full p-8 bg-gray-800 divide-y divide-gray-600 rounded-tl-lg sm:w-fit">
 					<section className="flex flex-col pb-6">
 						<h1 className="text-3xl font-bold text-gray-50">Paul Pirie</h1>
 						<h2 className="mb-4 text-2xl font-semibold text-gray-400">
@@ -103,8 +106,8 @@ const Home = () => {
 						</ul>
 					</section>
 				</aside>
-				<main className="flex flex-col w-full p-10 bg-gray-700 rounded-tr-lg">
-					<section className="mb-4">
+				<main className="flex flex-col w-full p-8 bg-gray-700 rounded-tr-lg">
+					<section className="w-full mb-4">
 						<div className="flex flex-row w-full">
 							<span className="w-8 h-8 my-auto text-5xl leading-6 text-center text-gray-300 bg-gray-600 rounded-full">
 								•
@@ -215,7 +218,7 @@ const Home = () => {
 							</div>
 						</ExperienceCard>
 					</section>
-					<section className="mb-4">
+					<section className="w-full mb-4">
 						<div className="flex flex-row w-full">
 							<span className="w-8 h-8 my-auto text-5xl leading-6 text-center text-gray-300 bg-gray-600 rounded-full">
 								•
@@ -224,7 +227,23 @@ const Home = () => {
 								Latest Projects
 							</h1>
 						</div>
-						<div className="p-4 pl-8" />
+						<ul className="flex flex-col flex-wrap w-full pt-4 pl-8 mt-2 lg:flex-row">
+							<ProjectCard
+								thumbnail={RSDPThumbnail}
+								title="Recruitment Skills Development Scotland"
+								description="Everything you need to know to improve your performance at recruitment events."
+								linkIcon={LinkIcon}
+								url="https://xpcinternational.com"
+							/>
+
+							<ProjectCard
+								thumbnail={GithubThumbnail}
+								title="Wordsearch Generator"
+								description="Collaborating with an author of children's puzzle books to develop an automated system for generating word searches for an upcoming puzzle book."
+								linkIcon={LinkIcon}
+								url="https://github.com/pjpirie/Wordsearch-Generator"
+							/>
+						</ul>
 					</section>
 					<section className="mb-4">
 						<div className="flex flex-row w-full">
