@@ -22,7 +22,7 @@ const getIcon = (
 ) => {
 	if (iconOutlined) {
 		return (
-			<div className="items-center justify-center hidden w-8 h-8 p-0 mr-4 bg-indigo-900 rounded-full xs:flex md:flex">
+			<div className="items-center justify-center hidden w-8 h-8 p-0 mr-4 rounded-full bg-icon_bg xs:flex md:flex">
 				<img src={icon} alt={iconAlt} className="w-auto h-4" />
 			</div>
 		);
@@ -45,15 +45,15 @@ const getText = (isFlag: boolean, keyName: string, value: string) => {
 	if (isFlag) {
 		return (
 			<>
-				<h4 className="text-gray-300">{keyName}</h4>
-				<h4 className="text-gray-500">{value}</h4>
+				<h4 className="text-text_heading">{keyName}</h4>
+				<h4 className="text-text">{value}</h4>
 			</>
 		);
 	}
 	return (
 		<>
-			<h4 className="text-gray-500">{keyName}</h4>
-			<h4 className="text-gray-300">{value}</h4>
+			<h4 className="text-text">{keyName}</h4>
+			<h4 className="text-text_heading">{value}</h4>
 		</>
 	);
 };

@@ -16,11 +16,11 @@ const ExperienceCard: any = (props: ExperienceProps) => {
 		<div className="p-4 pl-16 xxs:p-4">
 			<ul className="flex">
 				<li className="flex flex-col lg:flex-row">
-					<span className="hidden mr-8 text-3xl leading-6 text-gray-300 lg:inline-block">
+					<span className="hidden mr-8 text-3xl leading-6 text-text lg:inline-block">
 						•
 					</span>
 					<div className="flex flex-col lg:w-2/5">
-						<h5 className="text-gray-400 text-1x">
+						<h5 className="text-text text-1x">
 							{startdate} - {enddate} 🕑 {type}
 						</h5>
 						<div className="flex items-center my-2">
@@ -30,10 +30,8 @@ const ExperienceCard: any = (props: ExperienceProps) => {
 								className="w-12 h-12 rounded-md"
 							/>
 							<div className="flex flex-col ml-4 ">
-								<h4 className="font-semibold text-gray-400 text-md">
-									{position}
-								</h4>
-								<h2 className="text-xl font-bold text-gray-300">{name}</h2>
+								<h4 className="font-semibold text-text text-md">{position}</h4>
+								<h2 className="text-xl font-bold text-text_heading">{name}</h2>
 							</div>
 						</div>
 					</div>
