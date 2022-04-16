@@ -8,8 +8,8 @@ jobs:
   test:
     name: Test 👨‍🔬
     runs-on: ubuntu-latest
-    uses: actions/checkout@v2
     steps:
+      uses: actions/checkout@v2
       - run: npm ci
       - run: npm run lint
 
@@ -17,8 +17,8 @@ jobs:
     name: Building 🏗👷‍♂️
     needs: test
     runs-on: ubuntu-latest
-    uses: actions/checkout@v2
     steps:
+      uses: actions/checkout@v2
       - run: npm ci
       - run: npm run build
 
