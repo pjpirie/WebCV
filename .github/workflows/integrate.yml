@@ -1,0 +1,36 @@
+name: Auto deployment to https://paulpirie.com
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    name: Test 👨‍🔬
+    runs-on: ubuntu-latest
+    steps:
+      - run: npm run lint
+
+  build:
+    name: Building 🏗👷‍♂️
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - run: npm run build
+
+  web-deploy:
+    name: Deploy 🎯
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get main HEAD 👨‍💻
+        uses: actions/checkout@v2
+
+      - name: Upload files ⬆
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist
+          dangerous-clean-slate: true
