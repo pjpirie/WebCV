@@ -8,12 +8,17 @@ import TwitterIcon from "../assets/icons/TW.png";
 import GithubIcon from "../assets/icons/Git.png";
 import LinkedinIcon from "../assets/icons/Link.png";
 import EnglishIcon from "../assets/icons/UK.png";
-import XPCLogoIcon from "../assets/icons/XPC.png";
+import XPCLogo from "../assets/thumbnails/RSDP_Logo_X4.png";
+import UltroniqLogo from "../assets/thumbnails/Ultroniq_X4.png";
+import WorldskillsLogo from "../assets/thumbnails/Worldskills_X4.png";
 import ExperienceCard from "./comp/ExperienceCard.comp";
 import BioElement from "./comp/BioElement.comp";
 import RSDPThumbnail from "../assets/thumbnails/RSDP_X2.png";
 import GithubThumbnail from "../assets/thumbnails/github_X2.png";
 import ProjectCard from "./comp/ProjectCard.comp";
+import EducationCard from "./comp/EducationCard";
+import ENULogo from "../assets/thumbnails/ENU_X4.png";
+import COGCLogo from "../assets/thumbnails/COGC_X4.png";
 
 const Home = () => {
 	return (
@@ -135,7 +140,7 @@ const Home = () => {
 								</h1>
 							</div>
 							<ExperienceCard
-								logo={XPCLogoIcon}
+								logo={XPCLogo}
 								name="XPC International"
 								position="Lead Web Developer"
 								startdate="Jan 2021"
@@ -169,68 +174,59 @@ const Home = () => {
 							</ExperienceCard>
 
 							<ExperienceCard
-								logo={XPCLogoIcon}
-								name="XPC International"
+								logo={UltroniqLogo}
+								name="Ultroniq"
 								position="Lead Web Developer"
-								startdate="Jan 2021"
+								startdate="Oct 2019"
 								enddate="Jan 2022"
-								type="Contract"
+								type="Part-time"
 							>
 								<div className="lg:w-3/5">
 									<p className="text-text">
-										In this role I worked in a tight-knit multidiciplinary team,
-										taking our client’s concept to a fully operational and
-										marketable EdTech product.
+										In this role I worked directly with various clients across
+										different sectors, designing and developing full web
+										products.
 									</p>
 									<ul className="my-2">
 										<li className="my-1 text-text">
-											• Work directly with the project manager to create a plan
-											for design and development sprints.
+											• Meet with clients to form requirements specificaions.
 										</li>
 										<li className="my-1 text-text">
-											• Manage a small team of developers to implement key
-											features
+											• Communicate requirements to team members.
 										</li>
 										<li className="my-1 text-text">
-											• Design, develop, and manage backend system.
+											• Plan, Design, Develop, Test, and Deploy products.
 										</li>
 										<li className="my-1 text-text">
-											• Communicate technical knowledge to client’s and other
-											non-expert team members
+											• Manage a small team of developers.
 										</li>
 									</ul>
 								</div>
 							</ExperienceCard>
 
 							<ExperienceCard
-								logo={XPCLogoIcon}
-								name="XPC International"
-								position="Lead Web Developer"
-								startdate="Jan 2021"
-								enddate="Jan 2022"
+								logo={WorldskillsLogo}
+								name="WorldSkills UK"
+								position="Alumni Trainer"
+								startdate="Nov 2019"
+								enddate="Present"
 								type="Contract"
 							>
 								<div className="lg:w-3/5">
 									<p className="text-text">
-										In this role I worked in a tight-knit multidiciplinary team,
-										taking our client’s concept to a fully operational and
-										marketable EdTech product.
+										In this role I supported the training of candidates for the
+										WorldSkills regional qualifiers.
 									</p>
 									<ul className="my-2">
 										<li className="my-1 text-text">
-											• Work directly with the project manager to create a plan
-											for design and development sprints.
+											• Support training of candidates to compete at national
+											competition level.
 										</li>
 										<li className="my-1 text-text">
-											• Manage a small team of developers to implement key
-											features
+											• Attend virtual training sessions.
 										</li>
 										<li className="my-1 text-text">
-											• Design, develop, and manage backend system.
-										</li>
-										<li className="my-1 text-text">
-											• Communicate technical knowledge to client’s and other
-											non-expert team members
+											• Communicate technical knowledge.
 										</li>
 									</ul>
 								</div>
@@ -273,7 +269,32 @@ const Home = () => {
 								</h1>
 								<p className="pl-4 text-text">WIP</p>
 							</div>
-							<div className="p-4 pl-8" />
+							<ul className="flex flex-col w-full pt-4 pl-16 mt-2 mb-4 flex-nowrap lg:flex-row">
+								<EducationCard
+									instituteLogo={ENULogo}
+									instituteName="Edinburgh Napier University"
+									courseTitle="BSc (Hons) Web Design and Development"
+									startDate="Sep 2020"
+									endDate="Jun 2022"
+									grade="Expected: First"
+								/>
+								<EducationCard
+									instituteLogo={COGCLogo}
+									instituteName="City of Glasgow College"
+									courseTitle="HND Web Design and Development"
+									startDate="Aug 2019"
+									endDate="Jun 2020"
+									grade="A"
+								/>
+								<EducationCard
+									instituteLogo={COGCLogo}
+									instituteName="City of Glasgow College"
+									courseTitle="HNC Web Design and Development"
+									startDate="Aug 2018"
+									endDate="Jun 2019"
+									grade="A"
+								/>
+							</ul>
 						</section>
 						<section className="mb-4">
 							<div className="flex flex-row w-full">
