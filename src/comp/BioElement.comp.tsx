@@ -7,6 +7,7 @@ interface BioProps {
 	isFlag?: boolean;
 	keyName: string;
 	value: string;
+	url: string;
 }
 
 const defaultProps = {
@@ -66,11 +67,19 @@ const BioElement: any = (props: BioProps) => {
 		value,
 		iconOutlined = false,
 		isFlag = false,
+		url,
 	} = props;
 	return (
 		<li className="flex flex-row items-center justify-start mb-2">
-			{getIcon(iconOutlined, isFlag, icon, iconAlt)}
-			<div>{getText(isFlag, keyName, value)}</div>
+			<a
+				href={url}
+				target="_blank"
+				rel="nofollow noreferrer"
+				className="flex flex-row items-center justify-start cursor-pointer"
+			>
+				{getIcon(iconOutlined, isFlag, icon, iconAlt)}
+				<div>{getText(isFlag, keyName, value)}</div>
+			</a>
 		</li>
 	);
 };

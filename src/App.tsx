@@ -40,6 +40,7 @@ const Home = () => {
 									iconOutlined
 									keyName="Email"
 									value="pauljohnpirie@yahoo.co.uk"
+									url="mailto:pauljohnpirie@yahoo.co.uk"
 								/>
 								<BioElement
 									icon={LinkIcon}
@@ -47,6 +48,7 @@ const Home = () => {
 									iconOutlined
 									keyName="Website"
 									value="https://paulpirie.com"
+									url="https://paulpirie.com"
 								/>
 								<BioElement
 									icon={PhoneIcon}
@@ -61,6 +63,7 @@ const Home = () => {
 									iconOutlined
 									keyName="Address"
 									value="Greater Glasgow, Scotland"
+									url="https://www.google.co.uk/maps/place/Glasgow+City,+Glasgow/@55.8555367,-4.3024978,12z/data=!3m1!4b1!4m5!3m4!1s0x488846af031eafdf:0x30c681a0642b310!8m2!3d55.8641622!4d-4.2513729"
 								/>
 							</ul>
 						</section>
@@ -72,6 +75,7 @@ const Home = () => {
 									iconAlt="Instagram Icon"
 									keyName="Instagram"
 									value="@paulpiriewebdesign"
+									url="https://www.instagram.com/paulpiriewebdesign/"
 								/>
 
 								<BioElement
@@ -79,6 +83,7 @@ const Home = () => {
 									iconAlt="Twitter Icon"
 									keyName="Linkedin"
 									value="@pjpirie"
+									url="https://twitter.com/pjpirie"
 								/>
 
 								<BioElement
@@ -86,6 +91,7 @@ const Home = () => {
 									iconAlt="Github Icon"
 									keyName="Github"
 									value="@pjpirie"
+									url="https://github.com/pjpirie"
 								/>
 
 								<BioElement
@@ -93,6 +99,7 @@ const Home = () => {
 									iconAlt="Linkedin Icon"
 									keyName="Linkedin"
 									value="paul-pirie-37789715b"
+									url="https://www.linkedin.com/in/paul-pirie-37789715b/"
 								/>
 							</ul>
 						</section>
@@ -105,6 +112,7 @@ const Home = () => {
 									isFlag
 									keyName="English"
 									value="Native"
+									url="https://en.wikipedia.org/wiki/English_language"
 								/>
 							</ul>
 						</section>

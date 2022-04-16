@@ -12,7 +12,12 @@ const ProjectCard: any = (props: ProjectProps) => {
 	const { thumbnail, title, description, linkIcon, url } = props;
 	return (
 		<div className="flex flex-col flex-1 w-full h-auto mt-4 overflow-hidden rounded-lg bg-aside lg:rounded-none lg:mt-0 lg:w-1/2 lg:first:mr-2 lg:last:ml-2 first:rounded-l-md last:rounded-r-md">
-			<div className="w-full h-auto">
+			<a
+				href={url}
+				target="_blank"
+				rel="nofollow noreferrer"
+				className="w-full h-auto cursor-pointer"
+			>
 				<div className="flex-1 w-full h-full rounded-full">
 					<img
 						src={thumbnail}
@@ -20,7 +25,7 @@ const ProjectCard: any = (props: ProjectProps) => {
 						className="w-full h-full"
 					/>
 				</div>
-			</div>
+			</a>
 			<div className="flex flex-col justify-between w-full h-full">
 				<div className="w-full p-4">
 					<div className="flex items-center w-full">
@@ -37,7 +42,7 @@ const ProjectCard: any = (props: ProjectProps) => {
 						<img src={linkIcon} alt="Link Icon" className="h-5" />
 					</div>
 					<a
-						className="font-semibold underline text-link "
+						className="font-semibold underline cursor-pointer text-link"
 						href={url}
 						target="_blank"
 						rel="noreferrer"
