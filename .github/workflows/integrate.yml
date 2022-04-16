@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  test:
+  test-build:
     name: Test and Build
     runs-on: ubuntu-latest
     steps:
@@ -20,7 +20,7 @@ jobs:
 
   web-deploy:
     name: Deploy 🎯
-    needs: build
+    needs: test-build
     runs-on: ubuntu-latest
     steps:
       - name: Get main HEAD 👨‍💻
