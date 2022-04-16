@@ -6,19 +6,15 @@ on:
 
 jobs:
   test:
-    name: Test 👨‍🔬
+    name: Test and Build
     runs-on: ubuntu-latest
-    uses: actions/checkout@v2
     steps:
+      - name: Testing 👨‍🔬
+        uses: actions/checkout@v2
       - run: npm ci
       - run: npm run lint
-
-  build:
-    name: Building 🏗👷‍♂️
-    needs: test
-    runs-on: ubuntu-latest
-    uses: actions/checkout@v2
-    steps:
+      - name: Building 🏗👷‍♂️
+        uses: actions/checkout@v2
       - run: npm ci
       - run: npm run build
 
@@ -28,6 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get main HEAD 👨‍💻
+        uses: actions/checkout@v2
 
       - name: Upload files ⬆
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
