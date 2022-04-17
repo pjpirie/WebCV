@@ -13,7 +13,6 @@ const getURL = (
 	width: number,
 	setURL: React.Dispatch<React.SetStateAction<string>>,
 ) => {
-	console.log(width);
 	if (width < 340) {
 		setURL(`${url.substring(0, 15)}...`);
 		return;
@@ -57,6 +56,7 @@ const ProjectCard: any = (props: ProjectProps) => {
 				getURL(url, windowWidth, setDynamicUrl);
 			});
 		};
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	return (
