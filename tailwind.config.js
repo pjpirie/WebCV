@@ -9,9 +9,11 @@ module.exports = {
 		},
 		maxWidth: {
 			8: "1rem",
+			none: "unset",
 		},
 		screens: {
-			xxs: { max: "399px" },
+			xxxs: { max: "399px" },
+			xxs: { max: "449px" },
 			xs: { max: "639px" },
 			...defaultTheme.screens,
 		},

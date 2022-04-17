@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 interface ProjectProps {
 	thumbnail: any;
@@ -8,8 +8,57 @@ interface ProjectProps {
 	url: string;
 }
 
+const getURL = (
+	url: string,
+	width: number,
+	setURL: React.Dispatch<React.SetStateAction<string>>,
+) => {
+	console.log(width);
+	if (width < 340) {
+		setURL(`${url.substring(0, 15)}...`);
+		return;
+	}
+	if (width < 400) {
+		setURL(`${url.substring(0, 20)}...`);
+		return;
+	}
+	if (width < 640) {
+		setURL(url);
+		return;
+	}
+	if (width < 768) {
+		setURL(`${url.substring(0, 20)}...`);
+		return;
+	}
+	if (width < 1024) {
+		setURL(url);
+		return;
+	}
+	if (width < 1280) {
+		setURL(`${url.substring(0, 20)}...`);
+		return;
+	}
+	setURL(url);
+};
+
 const ProjectCard: any = (props: ProjectProps) => {
 	const { thumbnail, title, description, linkIcon, url } = props;
+	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+	const [dynamicUrl, setDynamicUrl] = useState("");
+
+	useEffect(() => {
+		window.addEventListener("resize", () => {
+			setWindowWidth(window.innerWidth);
+			getURL(url, window.innerWidth, setDynamicUrl);
+		});
+		return () => {
+			window.removeEventListener("resize", () => {
+				setWindowWidth(window.innerWidth);
+				getURL(url, windowWidth, setDynamicUrl);
+			});
+		};
+	}, []);
+
 	return (
 		<div className="flex flex-col flex-1 w-full h-auto mt-4 overflow-hidden rounded-lg bg-aside lg:rounded-none lg:mt-0 lg:w-1/2 lg:first:mr-2 lg:last:ml-2 first:rounded-l-md last:rounded-r-md">
 			<a
@@ -42,12 +91,12 @@ const ProjectCard: any = (props: ProjectProps) => {
 						<img src={linkIcon} alt="Link Icon" className="max-w-8 min-w-8" />
 					</div>
 					<a
-						className="font-semibold underline cursor-pointer text-link"
+						className="text-lg font-semibold underline cursor-pointer text-link"
 						href={url}
 						target="_blank"
 						rel="noreferrer"
 					>
-						{url}
+						{dynamicUrl}
 					</a>
 				</div>
 			</div>
