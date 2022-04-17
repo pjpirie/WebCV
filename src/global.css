@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+	background: #161b22;
+}
+
 * {
 	box-sizing: border-box;
 	padding: 0;

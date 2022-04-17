@@ -4,6 +4,12 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
 	content: ["./src/**/*.{html,js,tsx,ts}"],
 	theme: {
+		minWidth: {
+			8: "1rem",
+		},
+		maxWidth: {
+			8: "1rem",
+		},
 		screens: {
 			xxs: { max: "399px" },
 			xs: { max: "639px" },
@@ -18,6 +24,7 @@ module.exports = {
 			text_heading: "#E2E6EE",
 			link: "#95AAFB",
 			dot: "#758DE0",
+			bluedot: "#38446E",
 			linkBG: "#2A337E",
 			divider: "rgba(255, 255, 255, 0.1)",
 			shadow: "rgba(0, 0, 0, 0.05)",
