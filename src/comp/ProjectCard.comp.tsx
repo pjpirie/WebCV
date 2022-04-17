@@ -46,6 +46,7 @@ const ProjectCard: any = (props: ProjectProps) => {
 	const [dynamicUrl, setDynamicUrl] = useState("");
 
 	useEffect(() => {
+		getURL(url, window.innerWidth, setDynamicUrl);
 		window.addEventListener("resize", () => {
 			setWindowWidth(window.innerWidth);
 			getURL(url, window.innerWidth, setDynamicUrl);
