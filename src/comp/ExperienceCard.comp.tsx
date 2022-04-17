@@ -13,7 +13,7 @@ interface ExperienceProps {
 const ExperienceCard: any = (props: ExperienceProps) => {
 	const { logo, name, position, startdate, enddate, type, children } = props;
 	return (
-		<div className="p-4 pl-16 xxs:p-4">
+		<div className="p-4 pl-16 xxxs:p-4">
 			<ul className="flex">
 				<li className="flex flex-col w-full lg:flex-row">
 					<span className="hidden mr-8 text-3xl leading-6 text-text lg:inline-block">

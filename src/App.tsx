@@ -24,6 +24,10 @@ import ComputershareLogo from "../assets/thumbnails/Computershare_X4.png";
 import SkillCard from "./comp/SkillCard.comp";
 import DevelopmentIcon from "../assets/icons/DevelopmentIcon.png";
 import DesignIcon from "../assets/icons/DesignIcon.png";
+import ReactBadge from "../assets/icons/ReactBadge.png";
+import TailwindBadge from "../assets/icons/TailwindBadge.png";
+import TypescriptBadge from "../assets/icons/TypescriptBadge.png";
+import Tooltip from "./comp/Tooltip.comp";
 
 const Home = () => {
 	return (
@@ -128,7 +132,34 @@ const Home = () => {
 							</ul>
 						</section>
 					</div>
-					<div className="hidden w-full sm:inline-block h-fit ">
+					<div className="flex-col hidden w-full sm:flex h-fit ">
+						<p className="text-center text-md text-text">Built using:</p>
+						<div className="flex items-center justify-center w-full mt-1 mb-4">
+							<div className="relative group">
+								<Tooltip value="ReactJS" />
+								<img
+									src={ReactBadge}
+									alt="ReactJS"
+									className="w-10 h-10 rounded-lg "
+								/>
+							</div>
+							<div className="relative flex justify-center mx-4 w-fit group">
+								<Tooltip value="TailwindCSS" />
+								<img
+									src={TailwindBadge}
+									alt="Tailwind CSS"
+									className="w-10 h-10 rounded-lg "
+								/>
+							</div>
+							<div className="relative flex justify-center w-fit group">
+								<Tooltip value="Typescript" />
+								<img
+									src={TypescriptBadge}
+									alt="Typescript"
+									className="w-10 h-10 rounded-lg "
+								/>
+							</div>
+						</div>
 						<p className="font-semibold text-center text-1xl text-text">
 							© Paul Pirie {new Date().getFullYear()}
 						</p>
@@ -249,7 +280,7 @@ const Home = () => {
 									Latest Projects
 								</h1>
 							</div>
-							<ul className="flex flex-col flex-wrap w-full pt-4 pl-16 mt-2 mb-4 lg:flex-row">
+							<ul className="flex flex-col flex-wrap w-full pt-4 pl-16 mt-2 mb-4 xxs:pl-0 lg:flex-row">
 								<ProjectCard
 									thumbnail={RSDPThumbnail}
 									title="Recruitment Skills Development Scotland"
@@ -277,7 +308,7 @@ const Home = () => {
 									Education
 								</h1>
 							</div>
-							<ul className="flex flex-col w-full pt-4 pl-16 mt-2 mb-4 flex-nowrap lg:flex-row">
+							<ul className="flex flex-col w-full pt-4 pl-16 mt-2 mb-4 xxs:pl-0 flex-nowrap lg:flex-row">
 								<EducationCard
 									instituteLogo={ENULogo}
 									instituteName="Edinburgh Napier University"
@@ -314,7 +345,7 @@ const Home = () => {
 									Skills
 								</h1>
 							</div>
-							<div className="flex flex-col w-full pt-4 pl-16 mt-2 mb-4">
+							<div className="flex flex-col w-full pt-4 pl-16 mt-2 mb-4 xxs:pl-0">
 								<SkillCard
 									skillCategory="Development"
 									skillIcon={DevelopmentIcon}
@@ -433,7 +464,7 @@ const Home = () => {
 									Awards
 								</h1>
 							</div>
-							<ul className="flex flex-col w-full pt-4 pl-16 mt-2 mb-4 flex-nowrap lg:flex-row">
+							<ul className="flex flex-col w-full pt-4 pl-16 mt-2 mb-4 xxs:pl-0 flex-nowrap lg:flex-row">
 								<AwardCard
 									instituteLogo={WorldskillsLogo}
 									instituteName="WorldSkills UK"
@@ -450,6 +481,33 @@ const Home = () => {
 						</section>
 					</div>
 					<div className="inline-block w-full sm:hidden h-fit ">
+						<p className="text-center text-md text-text">Built using:</p>
+						<div className="flex items-center justify-center w-full mt-1 mb-4">
+							<div className="relative group">
+								<Tooltip value="ReactJS" />
+								<img
+									src={ReactBadge}
+									alt="ReactJS"
+									className="w-10 h-10 rounded-lg "
+								/>
+							</div>
+							<div className="relative flex justify-center mx-4 w-fit group">
+								<Tooltip value="TailwindCSS" />
+								<img
+									src={TailwindBadge}
+									alt="Tailwind CSS"
+									className="w-10 h-10 rounded-lg "
+								/>
+							</div>
+							<div className="relative flex justify-center w-fit group">
+								<Tooltip value="Typescript" />
+								<img
+									src={TypescriptBadge}
+									alt="Typescript"
+									className="w-10 h-10 rounded-lg "
+								/>
+							</div>
+						</div>
 						<p className="font-semibold text-center text-1xl text-text">
 							© Paul Pirie {new Date().getFullYear()}
 						</p>
