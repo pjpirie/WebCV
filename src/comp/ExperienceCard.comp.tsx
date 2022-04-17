@@ -15,7 +15,7 @@ const ExperienceCard: any = (props: ExperienceProps) => {
 	return (
 		<div className="p-4 pl-16 xxs:p-4">
 			<ul className="flex">
-				<li className="flex flex-col lg:flex-row">
+				<li className="flex flex-col w-full lg:flex-row">
 					<span className="hidden mr-8 text-3xl leading-6 text-text lg:inline-block">
 						•
 					</span>

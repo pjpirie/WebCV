@@ -38,8 +38,8 @@ const ProjectCard: any = (props: ProjectProps) => {
 					</h3>
 				</div>
 				<div className="flex items-center w-full p-4">
-					<div className="flex items-center justify-center w-10 h-10 p-0 mr-4 rounded-full bg-linkBG">
-						<img src={linkIcon} alt="Link Icon" className="h-5" />
+					<div className="flex items-center justify-center p-2 mr-4 rounded-full bg-linkBG">
+						<img src={linkIcon} alt="Link Icon" className="max-w-8 min-w-8" />
 					</div>
 					<a
 						className="font-semibold underline cursor-pointer text-link"

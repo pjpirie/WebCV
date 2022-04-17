@@ -23,8 +23,8 @@ const getIcon = (
 ) => {
 	if (iconOutlined) {
 		return (
-			<div className="items-center justify-center hidden w-8 h-8 p-0 mr-4 rounded-full bg-icon_bg xs:flex md:flex">
-				<img src={icon} alt={iconAlt} className="w-auto h-4" />
+			<div className="items-center justify-center hidden p-2 mr-4 rounded-full bg-icon_bg xs:flex md:flex">
+				<img src={icon} alt={iconAlt} className="max-w-8 min-w-8" />
 			</div>
 		);
 	}

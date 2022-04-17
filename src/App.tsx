@@ -1,24 +1,35 @@
 import "./global.css";
-import EmailIcon from "../assets/icons/Icon-3.svg";
-import LinkIcon from "../assets/icons/Icon-2.svg";
-import PhoneIcon from "../assets/icons/Icon-1.svg";
-import PinIcon from "../assets/icons/Icon.svg";
+import EmailIcon from "../assets/icons/EmailIcon.png";
+import LinkIcon from "../assets/icons/LinkIcon.png";
+import PhoneIcon from "../assets/icons/PhoneIcon.png";
+import PinIcon from "../assets/icons/PinIcon.png";
 import InstagramIcon from "../assets/icons/IG.png";
 import TwitterIcon from "../assets/icons/TW.png";
 import GithubIcon from "../assets/icons/Git.png";
 import LinkedinIcon from "../assets/icons/Link.png";
 import EnglishIcon from "../assets/icons/UK.png";
-import XPCLogoIcon from "../assets/icons/XPC.png";
+import XPCLogo from "../assets/thumbnails/RSDP_Logo_X4.png";
+import UltroniqLogo from "../assets/thumbnails/Ultroniq_X4.png";
+import WorldskillsLogo from "../assets/thumbnails/Worldskills_X4.png";
 import ExperienceCard from "./comp/ExperienceCard.comp";
 import BioElement from "./comp/BioElement.comp";
 import RSDPThumbnail from "../assets/thumbnails/RSDP_X2.png";
 import GithubThumbnail from "../assets/thumbnails/github_X2.png";
 import ProjectCard from "./comp/ProjectCard.comp";
+import EducationCard from "./comp/EducationCard.comp";
+import ENULogo from "../assets/thumbnails/ENU_X4.png";
+import COGCLogo from "../assets/thumbnails/COGC_X4.png";
+import AwardCard from "./comp/AwardCard.comp";
+import ComputershareLogo from "../assets/thumbnails/Computershare_X4.png";
+import SkillCard from "./comp/SkillCard.comp";
+import DevelopmentIcon from "../assets/icons/DevelopmentIcon.png";
+import DesignIcon from "../assets/icons/DesignIcon.png";
 
 const Home = () => {
 	return (
 		<div className="flex flex-col justify-end w-full h-auto sm:pt-10 bg-bg ">
-			<div className="flex flex-col h-full sm:flex-row md:container md:mx-auto ">
+			{/* <div className="flex flex-col h-full mx-0 md:mx-4 lg:mx-8 xl:mx-32 sm:flex-row "> */}
+			<div className="container flex flex-col h-full mx-auto sm:flex-row ">
 				<aside className="flex flex-col justify-between pb-4 rounded-tl-lg bg-aside">
 					<div className="w-full h-full p-8 pb-0 divide-y divide-divider sm:w-fit">
 						<section className="flex flex-col pb-6">
@@ -81,7 +92,7 @@ const Home = () => {
 								<BioElement
 									icon={TwitterIcon}
 									iconAlt="Twitter Icon"
-									keyName="Linkedin"
+									keyName="Twitter"
 									value="@pjpirie"
 									url="https://twitter.com/pjpirie"
 								/>
@@ -125,6 +136,7 @@ const Home = () => {
 				</aside>
 				<main className="flex flex-col justify-between w-full p-8 rounded-none sm:rounded-tr-lg bg-main">
 					<div className="flex flex-col">
+						{/* Experience */}
 						<section className="w-full mb-4">
 							<div className="flex flex-row w-full">
 								<span className="w-8 h-8 my-auto text-5xl leading-6 text-center rounded-full shadow-lg text-text bg-shadow">
@@ -135,7 +147,7 @@ const Home = () => {
 								</h1>
 							</div>
 							<ExperienceCard
-								logo={XPCLogoIcon}
+								logo={XPCLogo}
 								name="XPC International"
 								position="Lead Web Developer"
 								startdate="Jan 2021"
@@ -169,73 +181,65 @@ const Home = () => {
 							</ExperienceCard>
 
 							<ExperienceCard
-								logo={XPCLogoIcon}
-								name="XPC International"
+								logo={UltroniqLogo}
+								name="Ultroniq"
 								position="Lead Web Developer"
-								startdate="Jan 2021"
+								startdate="Oct 2019"
 								enddate="Jan 2022"
-								type="Contract"
+								type="Part-time"
 							>
 								<div className="lg:w-3/5">
 									<p className="text-text">
-										In this role I worked in a tight-knit multidiciplinary team,
-										taking our client’s concept to a fully operational and
-										marketable EdTech product.
+										In this role I worked directly with various clients across
+										different sectors, designing and developing full web
+										products.
 									</p>
 									<ul className="my-2">
 										<li className="my-1 text-text">
-											• Work directly with the project manager to create a plan
-											for design and development sprints.
+											• Meet with clients to form requirements specificaions.
 										</li>
 										<li className="my-1 text-text">
-											• Manage a small team of developers to implement key
-											features
+											• Communicate requirements to team members.
 										</li>
 										<li className="my-1 text-text">
-											• Design, develop, and manage backend system.
+											• Plan, Design, Develop, Test, and Deploy products.
 										</li>
 										<li className="my-1 text-text">
-											• Communicate technical knowledge to client’s and other
-											non-expert team members
+											• Manage a small team of developers.
 										</li>
 									</ul>
 								</div>
 							</ExperienceCard>
 
 							<ExperienceCard
-								logo={XPCLogoIcon}
-								name="XPC International"
-								position="Lead Web Developer"
-								startdate="Jan 2021"
-								enddate="Jan 2022"
+								logo={WorldskillsLogo}
+								name="WorldSkills UK"
+								position="Alumni Trainer"
+								startdate="Nov 2019"
+								enddate="Present"
 								type="Contract"
 							>
 								<div className="lg:w-3/5">
 									<p className="text-text">
-										In this role I worked in a tight-knit multidiciplinary team,
-										taking our client’s concept to a fully operational and
-										marketable EdTech product.
+										In this role I supported the training of candidates for the
+										WorldSkills regional qualifiers.
 									</p>
 									<ul className="my-2">
 										<li className="my-1 text-text">
-											• Work directly with the project manager to create a plan
-											for design and development sprints.
+											• Support training of candidates to compete at national
+											competition level.
 										</li>
 										<li className="my-1 text-text">
-											• Manage a small team of developers to implement key
-											features
+											• Attend virtual training sessions.
 										</li>
 										<li className="my-1 text-text">
-											• Design, develop, and manage backend system.
-										</li>
-										<li className="my-1 text-text">
-											• Communicate technical knowledge to client’s and other
-											non-expert team members
+											• Communicate technical knowledge.
 										</li>
 									</ul>
 								</div>
 							</ExperienceCard>
 						</section>
+						{/* Projects */}
 						<section className="w-full mb-4">
 							<div className="flex flex-row w-full">
 								<span className="w-8 h-8 my-auto text-5xl leading-6 text-center rounded-full bg-shadow text-text">
@@ -263,7 +267,8 @@ const Home = () => {
 								/>
 							</ul>
 						</section>
-						<section className="mb-4">
+						{/* Education */}
+						<section className="w-full mb-4">
 							<div className="flex flex-row w-full">
 								<span className="w-8 h-8 my-auto text-5xl leading-6 text-center rounded-full text-text bg-shadow ">
 									•
@@ -271,11 +276,36 @@ const Home = () => {
 								<h1 className="ml-10 text-3xl font-semibold text-text_heading">
 									Education
 								</h1>
-								<p className="pl-4 text-text">WIP</p>
 							</div>
-							<div className="p-4 pl-8" />
+							<ul className="flex flex-col w-full pt-4 pl-16 mt-2 mb-4 flex-nowrap lg:flex-row">
+								<EducationCard
+									instituteLogo={ENULogo}
+									instituteName="Edinburgh Napier University"
+									courseTitle="BSc (Hons) Web Design and Development"
+									startDate="Sep 2020"
+									endDate="Jun 2022"
+									grade="Expected: First"
+								/>
+								<EducationCard
+									instituteLogo={COGCLogo}
+									instituteName="City of Glasgow College"
+									courseTitle="HND Web Design and Development"
+									startDate="Aug 2019"
+									endDate="Jun 2020"
+									grade="A"
+								/>
+								<EducationCard
+									instituteLogo={COGCLogo}
+									instituteName="City of Glasgow College"
+									courseTitle="HNC Web Design and Development"
+									startDate="Aug 2018"
+									endDate="Jun 2019"
+									grade="A"
+								/>
+							</ul>
 						</section>
-						<section className="mb-4">
+						{/* Skills */}
+						<section className="w-full mb-4">
 							<div className="flex flex-row w-full">
 								<span className="w-8 h-8 my-auto text-5xl leading-6 text-center text-text bg-shadow rounded-ful">
 									•
@@ -283,11 +313,118 @@ const Home = () => {
 								<h1 className="ml-10 text-3xl font-semibold text-text_heading">
 									Skills
 								</h1>
-								<p className="pl-4 text-text">WIP</p>
 							</div>
-							<div className="p-4 pl-8" />
+							<div className="flex flex-col w-full pt-4 pl-16 mt-2 mb-4">
+								<SkillCard
+									skillCategory="Development"
+									skillIcon={DevelopmentIcon}
+									iconBG="bg-linkBG"
+								>
+									<li className="flex flex-col items-center justify-center h-auto p-4 mt-4 mr-1 rounded-lg xl:px-8 last:mr-0 bg-aside lg:rounded-none lg:mt-0 first:rounded-l-md last:rounded-r-md">
+										<h3 className="">ReactJS</h3>
+									</li>
+									<ul className="flex flex-col items-center h-auto p-4 mt-4 mr-1 rounded-lg xl:px-8 lg:items-start lg:rounded-none last:mr-0 bg-aside lg:mt-0 first:rounded-l-md last:rounded-r-md">
+										<li className="">
+											<h3 className="w-auto py-1">
+												<span className="mr-1">•</span>TailwindUI
+											</h3>
+										</li>
+										<li>
+											<h3 className="w-auto py-1">
+												<span className="mr-1">•</span>TailwindCSS
+											</h3>
+										</li>
+										<li>
+											<h3 className="w-auto py-1">
+												<span className="mr-1">•</span>Emotion
+											</h3>
+										</li>
+									</ul>
+									<ul className="flex flex-row items-center justify-center w-full h-auto p-4 py-4 mt-4 mr-1 divide-x-2 rounded-lg xl:px-8 divide-divider last:mr-0 bg-aside lg:mt-0 lg:rounded-none">
+										<li className="flex items-center h-full px-4">
+											<h3 className="w-fit">
+												Type
+												<br />
+												Script
+											</h3>
+										</li>
+										<li className="flex items-center h-full px-4">
+											<h3 className="w-fit">
+												MERN
+												<br />
+												Stack
+											</h3>
+										</li>
+									</ul>
+									<ul className="flex flex-row items-center justify-center w-full h-auto p-4 py-4 mt-4 mr-1 divide-x-2 xl:px-8 divide-divider last:mr-0 bg-aside lg:mt-0 lg:rounded-r-xl">
+										<li className="flex items-center h-full px-4">
+											<h3 className="w-fit">Git</h3>
+										</li>
+										<ul className="flex flex-col items-center justify-center w-full h-auto px-2 mt-4 mr-1 divide-y-2 divide-divider last:mr-0 bg-aside lg:mt-0 ">
+											<li className="flex items-center justify-center w-full h-full py-2 pb-4">
+												<h3 className="w-fit">Node</h3>
+											</li>
+											<li className="flex items-center justify-center w-full h-full py-2 pt-4">
+												<h3 className="w-fit">JS</h3>
+											</li>
+										</ul>
+									</ul>
+								</SkillCard>
+								<SkillCard
+									skillCategory="Design"
+									skillIcon={DesignIcon}
+									iconBG="bg-bluedot"
+								>
+									<ul className="flex flex-row items-center justify-center w-full h-auto p-4 py-4 mt-4 mr-1 divide-x-2 rounded-lg lg:rounded-none xl:px-8 lg:w-fit lg:rounded-l-xl divide-divider last:mr-0 bg-aside lg:mt-0 ">
+										<li className="flex items-center h-full px-4">
+											<h3 className="w-fit">
+												Web
+												<br />
+												Design
+											</h3>
+										</li>
+										<li className="flex items-center h-full px-4">
+											<h3 className="w-fit">
+												Mobile
+												<br />
+												Design
+											</h3>
+										</li>
+									</ul>
+									<li className="flex flex-col items-center justify-center h-auto p-4 mt-4 mr-1 rounded-lg xl:px-8 last:mr-0 bg-aside lg:rounded-none lg:mt-0 first:rounded-l-md last:rounded-r-md">
+										<h3 className="">
+											User
+											<br /> Experience
+										</h3>
+									</li>
+									<ul className="flex flex-col items-center justify-center w-full h-auto p-4 mt-4 mr-1 rounded-lg rounded-r lg:rounded-none xl:px-8 lg:items-start lg:w-fit last:mr-0 bg-aside lg:mt-0 first:rounded-l-md last:rounded-r-md">
+										<li className="">
+											<h3 className="w-auto py-1">
+												<span className="mr-1">•</span>Wireframing
+											</h3>
+										</li>
+										<li>
+											<h3 className="w-auto py-1">
+												<span className="mr-1">•</span>Prototyping
+											</h3>
+										</li>
+										<li>
+											<h3 className="w-auto py-1">
+												<span className="mr-1">•</span>Testing
+											</h3>
+										</li>
+									</ul>
+									<li className="flex flex-col items-center justify-center h-auto p-4 mt-4 mr-1 rounded-lg xl:px-8 last:mr-0 bg-aside lg:rounded-none lg:mt-0 first:rounded-l-md last:rounded-r-md">
+										<h3 className="">
+											Design
+											<br /> System
+										</h3>
+									</li>
+								</SkillCard>
+							</div>
 						</section>
-						<section className="mb-4">
+						{/* Awards */}
+						<section className="w-full mb-4">
 							<div className="flex flex-row w-full">
 								<span className="w-8 h-8 my-auto text-5xl leading-6 text-center rounded-full text-text bg-shadow">
 									•
@@ -295,9 +432,21 @@ const Home = () => {
 								<h1 className="ml-10 text-3xl font-semibold text-text_heading">
 									Awards
 								</h1>
-								<p className="pl-4 text-text">WIP</p>
 							</div>
-							<div className="p-4 pl-8" />
+							<ul className="flex flex-col w-full pt-4 pl-16 mt-2 mb-4 flex-nowrap lg:flex-row">
+								<AwardCard
+									instituteLogo={WorldskillsLogo}
+									instituteName="WorldSkills UK"
+									awardTitle="Highly Commended - WorkSkills UK Web Design"
+									awardDate="Nov 2019"
+								/>
+								<AwardCard
+									instituteLogo={ComputershareLogo}
+									instituteName="Computershare"
+									awardTitle="First Place Winner - ComputerShare Group Project "
+									awardDate="May 2021"
+								/>
+							</ul>
 						</section>
 					</div>
 					<div className="inline-block w-full sm:hidden h-fit ">
